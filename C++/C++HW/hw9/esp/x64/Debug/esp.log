@@ -1,0 +1,4 @@
+﻿  esp.c
+C:\Users\csfwn\Desktop\tashpa B'\c++\hw9\esp\esp.c(8,12): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'size_t'
+C:\Users\csfwn\Desktop\tashpa B'\c++\hw9\esp\esp.c(8,12): message : consider using '%zd' in the format string
+  esp.vcxproj -> C:\Users\csfwn\Desktop\tashpa B'\c++\hw9\esp\x64\Debug\esp.exe

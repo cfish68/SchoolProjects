@@ -1,0 +1,44 @@
+#Chaim Fishman 208509349
+#question 1
+.data #for example purposes
+array: .word 1 2 3 4 5 6 7 8 9 0 
+to: .space 1000
+.text #program 1 forlab
+addi $v0, $zero, 0 #start $v0 at 0 for initial value
+la $a0 array
+la $a1 to
+loop:
+lw $t1, 0($a0) #save word to be copied
+sw $t1, 0($a1) # store word saved into copied.
+addi $a0, $a0, 4  #point to next word to copy from
+addi $a1, $a1, 4 #point to next word to copy to
+addi $v0, $v0, 1 # increment by one for every word copied
+bne $zero, $t1 loop #if the word isn't 0 keep copying
+addi $v0 , $v0, -1 #don't count the last one so decrement by 1
+
+
+
+#question 2
+
+
+.text 
+addi $s1, $zero, 0        #counter=0 
+li $t5, -99               # for compare >-99
+li $t6, 99                # forcomparer <99
+counter_func:
+li $v0, 5                 #read int
+syscall                   #get input from user
+beq $v0, $zero, end       #Branch to end if input was 0
+slt $t0, $v0, $t5         #set to 1 if illegal
+beq $t0, 1, counter_func  #jump back ilegal input
+slt $t0, $t6, $v0         #set to 1 if ilegal
+beq $t0, 1, counter_func  #JUMP back ilegal input
+add $s1, $s1, $v0         # counter= counter+input;
+j counter_func            #if function reached this point input was legal and it's time to get another input
+end:
+li $v0, 1                 #make control to 1 to print out a word
+add $a0, $s1, $zero       #"load" the word into the register for output
+syscall                   #print out the word to the user
+
+#program ended.
+ 

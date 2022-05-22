@@ -1,0 +1,15 @@
+﻿  RoundLIst.cpp
+  main.cpp
+  Generating Code...
+RoundLIst.obj : error LNK2005: "public: __thiscall List::Link::Link(class List::Link const &)" (??0Link@List@@QAE@ABV01@@Z) already defined in main.obj
+RoundLIst.obj : error LNK2005: "public: __thiscall List::Link::Link(int,class List::Link *)" (??0Link@List@@QAE@HPAV01@@Z) already defined in main.obj
+RoundLIst.obj : error LNK2005: "public: __thiscall List::List(class List const &)" (??0List@@QAE@ABV0@@Z) already defined in main.obj
+RoundLIst.obj : error LNK2005: "public: __thiscall List::List(void)" (??0List@@QAE@XZ) already defined in main.obj
+RoundLIst.obj : error LNK2005: "public: __thiscall List::~List(void)" (??1List@@QAE@XZ) already defined in main.obj
+RoundLIst.obj : error LNK2005: "public: void __thiscall List::add(int)" (?add@List@@QAEXH@Z) already defined in main.obj
+RoundLIst.obj : error LNK2005: "public: void __thiscall List::clear(void)" (?clear@List@@QAEXXZ) already defined in main.obj
+RoundLIst.obj : error LNK2005: "public: int __thiscall List::firstElement(void)const " (?firstElement@List@@QBEHXZ) already defined in main.obj
+RoundLIst.obj : error LNK2005: "public: bool __thiscall List::isEmpty(void)const " (?isEmpty@List@@QBE_NXZ) already defined in main.obj
+RoundLIst.obj : error LNK2005: "public: void __thiscall List::removeFirst(void)" (?removeFirst@List@@QAEXXZ) already defined in main.obj
+RoundLIst.obj : error LNK2005: "public: bool __thiscall List::search(int const &)const " (?search@List@@QBE_NABH@Z) already defined in main.obj
+C:\Users\csfwn\Desktop\tashpa B'\c++\hw6\round_list\Debug\round_list.exe : fatal error LNK1169: one or more multiply defined symbols found

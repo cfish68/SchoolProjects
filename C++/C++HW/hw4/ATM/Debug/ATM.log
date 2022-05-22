@@ -1,0 +1,4 @@
+﻿  Account.cpp
+C:\Users\csfwn\Desktop\tashpa B'\c++\hw4\ATM\Account.cpp(78,10): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
+C:\Users\csfwn\Desktop\tashpa B'\c++\hw4\ATM\Account.cpp(92,10): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
+  ATM.vcxproj -> C:\Users\csfwn\Desktop\tashpa B'\c++\hw4\ATM\Debug\ATM.exe

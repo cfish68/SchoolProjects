@@ -1,0 +1,3 @@
+﻿  main.cpp
+C:\Users\csfwn\Desktop\tashpa B'\c++\hw7\polymorphism\main.cpp(25,27): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  polymorphism.vcxproj -> C:\Users\csfwn\Desktop\tashpa B'\c++\hw7\polymorphism\Debug\polymorphism.exe

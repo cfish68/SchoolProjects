@@ -1,0 +1,7 @@
+﻿  Employee.cpp
+C:\Users\csfwn\Desktop\tashpa B'\c++\Employee\Employee.cpp(22,16): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\csfwn\Desktop\tashpa B'\c++\Employee\Employee.cpp(28,12): warning C4305: '+=': truncation from 'double' to 'float'
+C:\Users\csfwn\Desktop\tashpa B'\c++\Employee\Employee.cpp(34,12): warning C4305: '+=': truncation from 'double' to 'float'
+C:\Users\csfwn\Desktop\tashpa B'\c++\Employee\Employee.cpp(40,12): warning C4305: '+=': truncation from 'double' to 'float'
+C:\Users\csfwn\Desktop\tashpa B'\c++\Employee\Employee.cpp(46,12): warning C4305: '+=': truncation from 'double' to 'float'
+  Employee.vcxproj -> C:\Users\csfwn\Desktop\tashpa B'\c++\Employee\x64\Debug\Employee.exe

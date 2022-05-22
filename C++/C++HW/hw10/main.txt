@@ -1,0 +1,86 @@
+#include <iostream>
+#include <list>
+#include <vector>
+#include <algorithm>
+#include <string>
+#include "Soldier.h"
+using namespace std;
+
+enum option {
+	stop,	//	End program
+	addNewSoldier,	//	Add new soldier
+	medalList,	//	Print all soldiers that are entitled to a medal
+	mostSociometric,	//	Most sociometric score 
+	countMedalPrivate,	//	Number of private soldiers getting a medal
+	noCombatCommander,	//	Names of officers not combat
+	overSoldier,	//	A message for soldier participating in more than 15 operations
+	removeOfficer,	//	Removing officers that did'nt participate in any operation
+};
+
+void add(list<Soldier*> lst);    //vector or list  
+void medal(list<Soldier*> lst);   //vector or list  
+Soldier* mostSociometricScore(list<Soldier>);   //vector or list
+
+int main()
+{
+	list<Soldier*> lst;	//define vector or list of soldiers
+		int op;
+	cout << "enter 0-7\n";
+	cin >> op;
+	while (op != stop)
+	{
+		switch (op)
+		{
+case addNewSoldier:add(lst);  //add new soldier						break;
+//case medalList:medal(____________);  //print entitled for a medal
+			break;
+		case mostSociometric:
+			Soldier* s = mostSociometricScore(_____); // vector or list 
+			cout << "Officer soldier with most sociometric score: ";
+			cout << s->getFname() << ' ' << s->getName() << endl;
+
+			break;
+		case countMedalPrivate:  cout << "# private soldier for medal: ";
+			________________ //number of privates entitled for medal
+				cout << endl;
+			break;
+		case noCombatCommander: cout << "list of no combat commander soldier :";
+
+			________________
+				cout << endl;
+			break;
+		case overSoldier:
+			if (______________)
+				cout << "there is a soldier that takes more than 15 operations\n";
+			else cout << "no soldier takes more than 15 operations\n";
+			break;
+		case removeOfficer:
+			________________
+				________________ //print list after removals
+				break;
+		};
+		cout << "enter 0-7\n";
+		cin >> op;
+	}
+	return 0;
+} 
+void add(list<Soldier*> lst)
+{
+	int numOfOperations;
+	cout << "enter 1 to add a private soldier\n";
+	cout << "enter 2 to add a commander soldier\n";
+	cout << "enter 3 to add a officer soldier\n";
+	cout << "enter id, first name, last name and number Of operations\n";
+	cout << "enter " << numOfOperations << " grades\n";
+	cout << "enter 1 if the soldier is combat and 0 if not\n";
+	cout << "enter number of sociometric score\n";
+
+}
+void medal(list<Soldier*> lst) {
+
+}
+Soldier* mostSociometricScore(list<Soldier>)
+{
+	//if there are no officers in the list return NULL
+	//
+}

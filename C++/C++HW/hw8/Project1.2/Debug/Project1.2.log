@@ -1,0 +1,15 @@
+﻿  main.cpp
+C:\Users\csfwn\Desktop\tashpa B'\c++\hw8\Project1.2\main.cpp(26,28): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\csfwn\Desktop\tashpa B'\c++\hw8\Project1.2\main.cpp(27,28): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\csfwn\Desktop\tashpa B'\c++\hw8\Project1.2\main.cpp(28,28): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\csfwn\Desktop\tashpa B'\c++\hw8\Project1.2\main.cpp(32,28): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\csfwn\Desktop\tashpa B'\c++\hw8\Project1.2\main.cpp(33,28): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\csfwn\Desktop\tashpa B'\c++\hw8\Project1.2\main.cpp(34,28): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\csfwn\Desktop\tashpa B'\c++\hw8\Project1.2\main.cpp(38,28): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\csfwn\Desktop\tashpa B'\c++\hw8\Project1.2\main.cpp(39,28): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\csfwn\Desktop\tashpa B'\c++\hw8\Project1.2\main.cpp(40,28): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\csfwn\Desktop\tashpa B'\c++\hw8\Project1.2\main.cpp(44,28): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\csfwn\Desktop\tashpa B'\c++\hw8\Project1.2\main.cpp(45,28): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\csfwn\Desktop\tashpa B'\c++\hw8\Project1.2\main.cpp(46,28): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\csfwn\Desktop\tashpa B'\c++\hw8\Project1.2\main.cpp(61,20): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data
+  Project1.2.vcxproj -> C:\Users\csfwn\Desktop\tashpa B'\c++\hw8\Project1.2\Debug\Project1.2.exe

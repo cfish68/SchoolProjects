@@ -1,0 +1,19 @@
+﻿  main.cpp
+C:\Users\csfwn\Desktop\tashpa B'\c++\hw9\Project1\SearchTree.h(80,1): error C2664: 'T SearchTree<T>::successor(T)': cannot convert argument 1 from 'Tree<T>::Node *' to 'T'
+          with
+          [
+              T=int
+          ]
+C:\Users\csfwn\Desktop\tashpa B'\c++\hw9\Project1\SearchTree.h(80,40): message : There is no context in which this conversion is possible
+C:\Users\csfwn\Desktop\tashpa B'\c++\hw9\Project1\SearchTree.h(19,4): message : see declaration of 'SearchTree<int>::successor'
+C:\Users\csfwn\Desktop\tashpa B'\c++\hw9\Project1\SearchTree.h(77): message : while compiling class template member function 'void SearchTree<int>::remove(T)'
+          with
+          [
+              T=int
+          ]
+C:\Users\csfwn\Desktop\tashpa B'\c++\hw9\Project1\main.cpp(41): message : see reference to function template instantiation 'void SearchTree<int>::remove(T)' being compiled
+          with
+          [
+              T=int
+          ]
+C:\Users\csfwn\Desktop\tashpa B'\c++\hw9\Project1\main.cpp(7): message : see reference to class template instantiation 'SearchTree<int>' being compiled

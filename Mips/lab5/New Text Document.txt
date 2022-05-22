@@ -1,0 +1,179 @@
+#Chaim Fishman 208509349
+
+#5.2 under 5.1
+
+#5.1
+#prints number of times code was found in List
+#since this was not a requirement I did not bother to print out
+#times(plural) for when the number is found more then 1 time(singualar) in the list.
+
+
+.data
+Message: .asciiz "Enter the length of the code followed by numbers in code\n"
+List: .byte 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30
+Code: .space 500
+Found: .asciiz "Code was found "
+Times: .asciiz " time"
+NotFound: .asciiz "Code was not found\n"
+
+.text
+li $a1, 32
+la $a2 Code
+la $a0, Message
+li $v0, 4
+syscall
+li $v0, 5
+syscall #get size
+add $a3, $v0, $zero#save size
+li $s0, 0
+inputCode:
+beq $s0, $a3 checkCode
+li $v0, 5
+syscall
+sb $v0, 0($a2)
+addi $a2, $a2, 1
+addi $s0, $s0, 1
+j inputCode
+
+checkCode:
+addi $a2, $a2, -1#a2 is "pointing" to the last element of code
+#la $a2, code a2 should remain the last in the end
+la $t0, Code
+la $a0, List
+
+check:
+beq $a1, $t4, endCheck
+addi $t4, $t4, 1
+lb $t1, 0($a0)#get number from list
+addi $a0, $a0, 1#next element on list
+lb $t2, 0($t0)#get number from code
+beq $t1, $t2 numberEqual
+
+la $t0, List
+j check
+numberEqual:
+beq $t0, $a2 setEqual
+addi $t0, $t0, 1
+j check
+
+
+setEqual:
+addi $t5, $t5, 1#how many times its in list t5
+la $t0 Code #we got a set now go back to the begining and see if there are any more
+j check
+
+
+endCheck:
+#print the code in the list
+la $t1, Code
+print:
+beq $t1, $a2 endPrint
+lb $a0, 0($t1)
+addi $t1, $t1, 1
+li $v0, 1
+syscall
+li $a0, ' '
+li $v0, 11
+j print
+
+endPrint:
+beq $t5, $zero, nocode
+la $a0 Found
+li $v0, 4
+syscall 
+add $a0, $t5, $zero
+li $v0, 1
+syscall
+la $a0, Times
+li $v0, 4
+syscall
+li $v0, 10
+syscall
+
+nocode:
+la $a0, NotFound
+li $v0, 4 
+syscall
+li $v0, 10
+syscall
+
+
+
+
+
+#5.2
+.data
+Error: .asciiz "Error:\n"
+.text
+
+li $s1, 0x31#for case 1
+li $s2, 0x30#.
+li $s3, 0x48#.
+li $s4, 0x74#case 4
+GetNum:
+li $v0, 5#get number from user, should be read in as decimal number
+syscall
+beq $v0, $zero, endProgram#if number entered=0 just end
+
+srl $t0, $v0, 24#shift to see what case we are dealing with
+beq $t0, $s1, case1
+beq $t0, $s2, case2
+beq $t0, $s3, case3
+beq $t0, $s4, case4
+j caseDefualt
+
+
+case1:
+li $a0, 195
+or $t0, $a0, $v0#overwrite t0 with new number. since we don't need it anymore
+j print
+
+case2:
+li $a0, 0xffffff3c
+and $t0, $a0, $v0
+j print
+
+case3:
+sll $t0, $v0, 17
+srl $t0, $t0, 25
+li $t4, 0x00007f80#hw asks for 8-15 bits i assume inculusive1224736767
+xor $t0, $t4, $v0
+j print
+
+case4: 
+sll $t4, $v0, 8
+srl $t4, $t4, 26
+add $t0, $v0, $zero
+shiftLeft:
+beq $t4, $zero, print
+sll $t0, $t0, 1
+addi $t4, $t4, -1
+j shiftLeft
+
+
+print:
+add $a0, $v0, $zero
+li $v0, 1#print int recieved as is
+syscall
+li $a0, '\n'
+li $v0, 11
+syscall
+add $a0, $t0, $zero #new number to be printed
+li $v0, 34
+syscall
+li $a0, '\n'
+li $v0, 11
+syscall
+j GetNum
+
+
+caseDefualt:
+la $a0, Error
+li $v0, 4
+syscall 
+j GetNum
+
+endProgram:
+li $v0, 10
+syscall
+
